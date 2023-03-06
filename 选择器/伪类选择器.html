@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* 伪类（不存在的类）
+            伪类用来描述元素的特殊状态
+            比如:第一个子元素、被点击的元素、鼠标移入的元素 
+            伪类一般情况下使用冒号开头
+            比如:first-child表示第一个子元素
+            */
+        /* 第一个子元素 */
+        ul > li:first-child
+        {
+            color: red;
+        }
+        /* 最后一个子元素 */
+        ul > li:last-child
+        {
+            color: blue;
+        }
+        /* 任意第括号中的数个子元素 
+            2n或even 表示选择偶数位对的子元素
+            n 表示选择全部子元素
+            2n+1或odd表示选中奇数位的子元素
+            普通参数就是固定选择第几个子元素*/
+        /* ul > li:nth-child(2n+1)
+        {
+            color: antiquewhite;
+        } */
+        /* 以上这些伪类都是根据所有子元素进行排序的 */
+        /* 
+        first-of-type
+        nth-of-type
+        last-of-type
+        以上三个伪类和上面的伪类类似，
+        但只找同类型的子元素。
+        */
+        ul > li:first-of-type
+        {
+            color: red;
+        }
+        /* :not() 表示否定伪类，
+        将符合条件元素从选择器中去除 */
+        ul > li:not(:nth-of-type(3))
+        {
+            font-size: larger;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <span>我是一个span</span>
+        <li>第0个</li>
+        <li>第1个</li>
+        <li>第2个</li>
+        <li>第3个</li>
+        <li>第4个</li>
+        <li>第5个</li>
+        <li>第6个</li>
+    </ul>
+</body>
+</html>

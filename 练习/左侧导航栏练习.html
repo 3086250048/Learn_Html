@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/去除默认样式.css">
+    <style>
+        body{
+            background-color: antiquewhite
+        }
+        /* 设置外部容器 */
+        .left-nav
+        {
+            background-color:white;
+            width: 190px;
+            padding: 10px 0;
+            margin: 100px auto;
+        }
+        /* 设置菜单内部的item */
+        .left-nav .item
+        {
+            height: 25px;
+            /* 要让一个文字在父元素中垂直居中，只需要
+            将父元素line-height设置为和height一样高即可*/
+            line-height: 25px;
+            padding-left: 18px;
+            font-size: 12px;
+        }
+        /*为item设置一个一个鼠标移入状态  */
+        .left-nav .item:hover{
+                background-color: #d9d9d9;
+        }
+        /* 设置超链接样式 */
+        .item a{
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .item a:hover{
+            color: #c81623;
+        }
+        /* 设置斜杠的左右内边距 */
+        .item span{
+            padding-left: 2px;
+            padding-right: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="left-nav">
+        <div class="item">
+            <a href="javascript:;">家用电器</a>
+        </div>
+        <div class="item">
+            <a href="javascript:;">手机</a>
+            <span>/</span>
+            <a href="javascript:;">运营商</a>
+            <span>/</span>
+            <a href="javascript:;">数码</a>
+        </div>
+        <div class="item">
+            <a href="javascript:;">电脑</a>
+            <span>/</span>
+            <a href="javascript:;">运营商</a>
+            <span>/</span>
+            <a href="javascript:;">办公</a>
+        </div>
+    </nav>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/去除默认样式.css">
+    <style>
+        body{
+            background-color: beige;
+        }
+       .img_list
+       {
+        width: 165px;
+        height: 250px;
+        overflow: hidden;
+        margin: 50px auto;
+        background-color: red;
+       }
+       .img_list img{ width: 100%;}
+       .img_list li:not(:last-child) 
+       {margin-bottom: 1.1px;}
+    </style>
+</head>
+<body>
+   <ul class="img_list">
+    <li><a href="javascript:;"><img src="../资源/a.jpg"  ></a></li>
+    <li><a href="javascript:;"><img src="../资源/a.jpg"  ></a></li>
+    <li><a href="javascript:;"><img src="../资源/a.jpg" ></a></li>
+   </ul>
+</body>
+</html>

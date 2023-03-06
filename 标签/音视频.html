@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 默认情况下引入的音视频不允许用户自己操作
+    除非添加 controls 关键字
+            autoplay 自动播放 
+            loop 循环播放-->
+     <!-- 
+        写法1
+        <audio src="a.mp3" controls autoplay loop></audio>
+     -->
+     <!-- 写法2 的好处是可以提示不支持音频播放的浏览器的用户-->
+        <audio controls autoplay>
+            <p>对不起您的浏览器不支持播放音频</p>
+            <source src="/a.mp3">   
+        </audio>
+       
+        
+
+</body>
+</html>

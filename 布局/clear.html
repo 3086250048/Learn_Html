@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div{
+            font-size: 50px;
+        }
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: #bfc;
+            float: left;
+        }
+        .box2{
+                width: 400px;
+                height: 400px;
+                background-color:antiquewhite;
+                float: right;
+        }   
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            /* clear作用:清除浮动元素对当前元素
+            所产生的影响 
+            left 清除左侧浮动元素对当前元素的影响
+            right 清除右侧浮动元素对当前元素的影响
+            both:清除两侧影响最大的一个
+            原理:设置以后，浏览器会自动为元素设置一个
+            上外边距，使其不受其他元素的影响
+            */
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">1</div>
+    <div class="box2"></div>
+    <div class="box3">3</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box1{
+            font-size: 50px;
+            /* text-decoration:;设置文本修饰
+                可选值:display: none 什么都没有
+                                underline 下划线
+                                line-through 删除线
+                                overline 上划线
+            */
+            /* 还可以添加样式和颜色 */
+            text-decoration: underline line-through  blue dashed ;
+            /* white-space: 
+                可选值:  normal
+                        nowrap 不换行
+                        pre 保留空白   
+                                 */
+            width: 500px;
+            /* 以下三个配合使用实现多余内容以省略号显示的功能 */
+            /* 设置为不换行 */
+            white-space: nowrap;
+            /* 设置溢出内容隐藏 */
+            overflow: hidden;
+            /* 多出的内容显示省略号 */
+            text-overflow: ellipsis;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius dolorem eum expedita molestiae ipsa, facilis vero eos amet odio laudantium fuga totam tempore officia, libero inventore beatae ipsum ipsam quaerat.</div>
+</body>
+</html>

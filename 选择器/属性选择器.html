@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* 属性选择器，选择含有指定元
+        素的选择器,可以只写属性不写值 */
+        p[title=ab]
+        {
+            color: red;
+        }
+        span[title=abc]
+        {
+            color: blue;
+
+        }
+        /* ^=ab 表示以ab开头的属性值 */
+        span[title^=ab]
+        {
+            font-size: 21px;
+        }
+        /* $=e 表示以e结尾的属性值 */
+        span[title$=e]
+        {
+            color: bisque;
+        }
+        /* *=ab 表示属性值包含ab*/
+        span[title*=d]
+        {
+            font-size: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        <p title="ab">
+            我是div中的p
+            <span title="abc">
+                我是p中的span
+            </span>
+        </p>
+        <span title="abcd">
+            我是div中的span
+        </span>
+        <span title="abcde">
+            我是div中的span
+        </span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box1{
+            height: 200px;
+            width: 200px;
+            background-color: #bfc;
+            /* 通过overflow 开启BFC */
+            overflow: hidden;
+            /* 默认情况下开启浮动后下边的box3就会因为高度塌陷问题被box1覆盖 */
+            float: left;
+        }
+        .box2{
+            height: 200px;
+            width: 200px;
+            background-color: antiquewhite;
+            /* 给box2设置overflow开启BFC */
+            overflow: hidden;
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            /* 默认情况下子元素的垂直外边距会传递给父元素 */
+            margin-top: 100px;
+            /* 在父元素中开启BFC是外边距不传递 */
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box3"></div>
+    </div>
+    <div class="box2"></div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+   <!--  方法三:也是最好的办法是引入一个css文件去除
+    所以标签的默认样式  -->
+   <link rel="stylesheet" href="../css/去除默认样式.css">
+    <style>
+        /* 方法一 ：一个一个去除，最精确 */
+          /* 去除body默认的8的margin */
+        body
+        {
+          
+            margin: 0;
+        }
+         /* 去除默认的16的margin */
+        p
+        {
+           
+            margin: 0;
+        }
+        /* 去除16的margin和40的padding 
+                list-style:none去除列表前的黑点*/
+        ul
+        {
+            
+            margin: 0;
+            padding: 0;
+            margin-left: 20px;
+            list-style: none;
+        }
+        .box1
+        {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+        }
+
+        /* 方法二，通配符但是会去除不完全 */
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+  
+    </style>
+</head>
+<body>
+    <!-- 默认样式
+        默认情况下浏览器都会为元素设置一些默认样式
+        因为会影响页面布局所以一般情况下需要去除 -->
+
+        <div class="box1"></div>
+        <p>我是p</p>
+        <p>我是p</p>
+        <ul>
+            <li>我是1</li>
+            <li>我是2</li>
+            <li>我是3</li>
+            <li>我是4</li>
+            <li>我是5</li>
+        </ul>
+</body>
+</html>

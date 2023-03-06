@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box1
+        {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        .box2
+        {
+            /* %是相当于父元素大小的百分比 */
+            width: 50%;
+            height: 50%;
+            background-color: yellow;
+        }
+        .box3
+        {
+            /* em是相对于自身元素字体大小来计算的
+                1em=font-size 
+                rem是相对于html标签中字体大小计算.*/
+            width: 10em;
+            height: 10em;
+            font-size: 20px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+    <div class="box3"></div>
+</body>
+</html>

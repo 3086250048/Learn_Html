@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+            .box1
+            {
+
+                width: 100px;
+                background-color: yellow;
+            }
+            .box2
+                {
+                    width: 100px;
+                    background-color: black;
+                }
+            .s1
+            {
+                background-color: yellowgreen;
+            }
+            .s2
+            {
+                background-color: antiquewhite;
+            }
+
+    </style>
+</head>
+<body>
+    <!-- 文档流
+        元素主要有两个状态，一个是在文档流中，还有一种是脱离
+        文档流。 
+    
+    元素在文档流中有什么特点
+        块元素
+            ①在页面中独占一行（自上向下垂直排列）
+            ②默认宽度为父元素的全部
+            ③默认高度为内容的高度(子元素)
+        行内元素
+            行内元素不会独占页面的一行，只占自身的大小
+            行内元素在页面中自左向右水平排列
+            如果一行中不容纳所有行内元素，则会换到第二行继续自左向右排列。
+            行内元素的默认宽度和高度都内被内容撑开的。
+    -->
+    <div class="box1">我是div1</div>
+    <div class="box2">我是div2</div>
+    <span class="s1">我是span1</span>
+    <span class="s2">我是span2</span>
+    <span class="s1">我是span1</span>
+    <span class="s2">我是span2</span>
+    <span class="s1">我是span1</span>
+    <span class="s2">我是span2</span>
+    <span class="s1">我是span1</span>
+    <span class="s2">我是span2</span>
+    <span class="s1">我是span1</span>
+    <span class="s2">我是span2</span>
+</body>
+</html>

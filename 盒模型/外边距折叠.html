@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* 兄弟元素之间的垂直外边距
+        如果重叠了，会发生以下情况
+        如果都为正数则会取较大值
+        如果一正一负，则取两者相加值 
+        如果都为负数，则取绝对值大的*/
+        
+        /* .box1{
+            width: 200px;
+            height: 200px;
+            background-color: red;    
+            margin-bottom: 100px;
+            }
+
+        .box2{ 
+            width: 200px;
+            height: 200px;
+            background-color: orange;    
+            margin-top: 100px;
+            } */
+        /* 父子元素
+        父子元素的相邻外边距，子元素
+        会传递给父元素（上外边距） 
+        父子元素外边距的折叠会影响到页面的
+        布局。必须进行处理
+        目前有2种解决方案
+        ①在父元素中用padding然后减少父元素的高度
+        ②给父元素添加边框，然后设置子元素的margin*/
+        .box3{
+            width: 200px;
+            height: 199px;
+            background-color: red;    
+           
+            }
+
+        .box4{ 
+            width: 100px;
+            height: 100px;
+            background-color: orange;    
+           
+            }
+    </style>
+</head>
+<body>
+    <!-- <div class="box1"></div>
+    <div class="box2"></div> -->
+
+    <div class="box3">
+         <div class="box4"></div>
+    </div>
+   
+    
+</body>
+</html>

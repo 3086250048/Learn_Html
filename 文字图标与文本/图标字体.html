@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../资源/图标字体/css/all.css">
+    <style>
+        /* 方法一改变图标颜色方法 */
+        .fa-bell{
+            font-size: 100px;
+            color: #bfa;
+        }
+        li{
+            list-style: none;
+        }
+        /*  方法二
+        fab
+         font-family: 'Font Awesome 5 Brands';
+        fas
+         font-family: 'Font Awesome 5 Free';
+         font-weight: 900;
+        
+        */
+        li::before{
+            /* content 后面跟上图标代码 */
+            content:'\f105';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            color: blue;
+            margin-right: 10px;
+            font-size: 10px;
+
+        }
+        
+    </style>
+</head>
+
+<body>
+    <!-- 
+        图标字体
+         在网页中经常需要使用一些图标，可以通过图片
+         来引入图标，单图片本省比较大，并且非常的不灵活
+         所以在使用图标时，可以将图标直接设置为字体，然后
+         通过font-face的形式来对字体进行引入，这样就可以通过
+         字体的形式使用图标
+         图标字体网站:font awesome
+        1.下载图标字体
+        2.解压
+        3.将css和webfonts移到到项目中
+        4.将all.css引入文件
+     -->
+     <!-- 大部分为fas或fab开头 后面跟上图标代码，需要查文档 -->
+     <!-- 使用方法一 直接使用标签添加-->
+     <i class="fas fa-bell"></i>
+     <!-- 使用方法二 使用伪元素添加 -->
+     <ul>
+        <li>你好世界</li>
+        <li>this is very important</li>
+        <li>i don't want to be here</li>
+        <li>i want to know you</li>
+        <li>can i help you</li>
+     </ul>
+     <!-- 方式三 使用实体添加 -->
+     <span class="fas">&#xf0f3;</span>
+</body>
+</html>

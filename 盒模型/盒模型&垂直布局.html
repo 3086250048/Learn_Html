@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .outer{
+            background-color: black;
+        }
+        .inner1{
+            /* 默认情况下父元素的高度被子元素撑开 */
+            background-color: #bfd;
+            width: 100px;
+            height: 100px;
+            margin: 0 0 20px 0;
+            
+        }
+        .inner2{
+            /* 默认情况下父元素的高度被子元素撑开 */
+            background-color: #bfd;
+            width: 100px;
+            height: 100px;
+            margin: 0;
+        }
+        .box1
+        {
+            width: 200px;
+            height: 200px;
+            background-color: #bfd;
+            /* 如果子元素的大小超过了父元素，则会溢出
+            使用overfolw设置如何处理溢出的子元素
+            visible 默认溢出
+            hidden  隐藏
+            scroll 显示滚动条
+            auto 根据需要生成滚动条
+            -y或者-x代表处理那个方向上的溢出，默认都处理
+            */
+            overflow-y: hidden;
+        }
+        .box2
+        {
+            
+            width: 100px;
+            height: 800px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="outer">
+        <div class="inner1"></div>
+        <div class="inner2"></div>
+        </div>
+    </div> -->
+    <div class="box1">
+        <div class="box2">
+        </div>
+    </div>
+
+</body>
+</html>

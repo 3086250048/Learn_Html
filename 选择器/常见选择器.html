@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* 元素选择器 */
+        p{
+            color: red;
+        }
+        h1{
+            color: blue;
+
+        }
+        /* id选择器  id不可以重复*/
+        #pid_1{
+            color: blueviolet;
+        }
+        /* class选择器 class可以重复,且一个元素
+        可以有多个class属性用空格隔开*/
+        .sid
+        {
+            color: chartreuse;
+        }
+        .pid{
+            font-size: 40px;
+        }
+        /* *{} 表示所有元素 */
+        *{
+            color:purple;
+        }
+    </style>
+</head>
+<body>
+    <h1>我是标题</h1>
+    <p >你好世界!</p>
+    <p id="pid_1">你不好世界！</p>
+    <span class="sid">我是陈中正</span><span class="sid">我是陈中正</span>
+    <p class="sid pid">你不好</p>
+    <span>所有元素</span>
+</body>
+</html>

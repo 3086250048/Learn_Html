@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box2{
+            width:100px;
+            height: 200px;
+            background-color:#bfa;
+            float: left;
+    
+        }
+        .box1{
+            border: 10px solid red;
+        } 
+        /* 使用after为元素解决高度塌陷 */
+        .box1::after{
+            content: '';
+            clear: both;
+            /* after伪类添加的内容默认为inline需要
+            转换为块元素 */
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+        <!-- 使用after之后会在这里添加内容，
+        由于添加的内容没有脱离文档流且被转换为了块
+         元素所以可以将box1撑开。
+         -->
+    </div>
+</body>
+</html>

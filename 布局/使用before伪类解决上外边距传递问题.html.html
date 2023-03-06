@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: #bfc;
+        }
+        /*使用before隔开两个box  */
+        /* .box1::before{
+            content: '';
+            display: table;
+        } */
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            margin-top: 100px;
+        }
+        .clearfix::before,
+        .clearfix::after{
+            /* 占位字符 */
+            content: '';
+            /* table即可以解决高度塌陷也
+            可以解决外边距重叠 */
+            display: table;
+            /* 清除浮动影响解决高度塌陷 */
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1 clearfix">
+        <!-- 使用before后相当于在这里添加了内容
+        隔开了两个box使其上外边距不会传递 -->
+        <div class="box2"></div>
+    </div>
+</body>
+</html>

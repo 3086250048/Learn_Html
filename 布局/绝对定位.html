@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* 绝对定位是相对于包含块进行定位的
+            正常情况下
+                包含块就是当前元素最近的上级元素 
+            绝对定位的情况下
+                包含块指开启了定位的祖先元素 */
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: #bfc;
+            margin-top: 100px;
+            position: relative;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            bottom: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+        <div class="box1">
+            <div class="box2"></div>
+        </div>
+
+</body>
+
+</html>

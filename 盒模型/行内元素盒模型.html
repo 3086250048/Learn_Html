@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+     
+        .s1
+        { 
+            /*行内元素不支持设置宽高
+            宽度和高度由内容决定  */
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /* 行内元素可以设置padding
+            垂直方向的padding不会影响页面布局 */
+            /* padding: 100px; */
+            /* 行内元素可以设置border
+            垂直方向的border不会影响页面布局 */
+            /* border: solid 100px ; */
+            /* 行内元素可以设置margin，
+            垂直方向的Margin不会影响页面布局
+            且水平方向的margin数值会相加 */
+            margin: 300px;
+           
+        
+        }
+        .box1
+        {
+            width:200px;
+            height: 200px;
+            background-color: orange;
+        }
+
+        a{
+            /* display 用来设置元素的显示类型
+            inline:将元素设置为行内元素
+            block 将元素设置为块元素
+            inlink-block 将元素设置为行内块元素
+            使元素即可以设置宽高，又不会独占一行
+            table 将元素设置为表格
+            none 元素不在页面中显示，且不占据位置
+             */
+            display: block;
+            /* visibility 用来设置元素的显示状态
+            visible 默认值，正常显示
+            hidden 隐藏元素，但是占据页面位置 */
+            visibility: hidden;
+            width: 100px;
+            height: 100px   ;
+            background-color:bisque;
+        }
+    </style>
+</head>
+<body>
+    <a href="javescript:;">超链接</a>
+    <span class="s1">我是span</span>
+    <div class="box1"></div>
+</body>
+</html>

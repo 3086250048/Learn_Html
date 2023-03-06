@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/去除默认样式.css">
+    <style>
+        /* 设置图片的容器 */
+        .ul_img{
+            width: 590px;
+            height: 470px;
+            margin: 100px auto;
+            background-color: #bfc;
+            /* 这里开启相对定位是为了point能相对于ul进行定位，而不是相对于原点进行定位 */
+            position: relative;
+        }
+        /* 设置li */
+        .ul_img li{
+            position: absolute;
+        }
+        .ul_img li:nth-child(4){
+            z-index: 1;
+        }
+        .point{
+            position: absolute;
+            z-index: 9999;
+            bottom: 20px;
+            left: 20px;
+        }
+        .point a{
+            /* 让a元素脱离文档流 */
+            float: left;
+            width: 10px;
+            height: 10px;
+            background-color:rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            margin-left: 4px;
+            /* 使背景颜色只衍生到内容区 */
+            background-clip: content-box;
+            border: 4px solid transparent;
+           
+        }
+        .point a.active,.point a:hover{
+            background-color:rgba(255, 255, 255, 1);
+            border: solid 4px rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    
+        <ul class="ul_img">
+            <li><a href="javascript:;"><img src="../资源/q.jpg" ></a></li>
+            <li><a href="javascript:;"><img src="../资源/q (1).jpg" ></a></li>
+            <li><a href="javascript:;"><img src="../资源/q (2).jpg" ></a></li>
+            <li><a href="javascript:;"><img src="../资源/q (3).jpg" ></a></li>
+            <li><a href="javascript:;"><img src="../资源/q (4).jpg" ></a></li>
+            <div class="point">
+                <a class="active" href="javascript:;"></a>
+                <a href="javascript:;"></a>
+                <a href="javascript:;"></a>
+                <a href="javascript:;"></a>
+                <a href="javascript:;"></a>
+            </div>
+        </ul>
+        
+</body>
+</html>

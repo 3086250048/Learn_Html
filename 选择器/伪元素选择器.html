@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 伪元素，表示页面中一些特殊并不存在的元素(比如特殊的位置)
+        为元素用::开头
+        比如::first-letter表示第一个字母
+            ::first-line表示第一行
+            ::selection表示选中的内容 -->
+        <style>
+            p::first-letter
+            {
+                font-size: 20px;
+            }
+            p::first-line
+            {
+                background-color: blanchedalmond;
+            }
+            p::selection
+            {
+                background-color: blanchedalmond;
+            }
+            /* ::before表示元素的最开头
+               ::after表示元素的最结尾
+               content表示通过css添加的文字
+               通过css添加的文字不能被选中  */
+            div::before
+            {
+                content: '❤️你好';
+                color: red;
+            }
+            div::after
+            {
+                content: '❤️';
+                color: blue;
+            }
+        </style>
+</head>
+<body>
+    <div>Hello this is my div</div>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, quibusdam saepe! Maxime, officiis accusantium. Quibusdam placeat ut quas minus nostrum officiis quae quaerat iste, sapiente vitae et mollitia hic facilis.
+    </p>
+</body>
+</html>

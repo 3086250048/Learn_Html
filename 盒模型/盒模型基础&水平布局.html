@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box1
+        {   
+            /* width和height设置的是内容区的大小 */
+            background-color: rebeccapurple;
+            width: 800px;
+            height: 100px;
+            /* 设置边框至少要三个样式
+                边框的宽度 boder-width(边框的大小会影响盒子的大小)
+                边框的颜色 border-color
+                边框的风格 border-style */
+
+                /*
+                    boder-width
+                   4个值:分别代表 上、右、下、左 
+                   3个值:上、左右、下
+                   2个值:上下、左右
+                   1个值:上下左右
+                   除了boder-width还可以使用
+                   border-xxxx-width：xxx为上下左右可以自行指定（color和style同理）
+                 */
+            border-width:10px;
+            /* 如果不写border-color则color属性生效 */
+            border-color: green;
+            /* dashed 线段虚线 dotted 点状虚线 solid 实线 double 双实线 */
+            border-style:dashed dotted solid double;
+            /* 简写属性 border 通过该属性，可以设置边框所有属性 
+            同理也可以使用border-xxxx 分别设置剩下左右*/
+            border: 10px solid orange;
+            /* none用于去除边框 
+            border-right: none;*/
+
+            /* 内边距（padding）
+            内边距的设置会影响盒子的像素
+            默认情况下背景颜色会衍生到内边距上!
+            一共有四个方向的内边距 
+            
+            盒子的可见框大小由:内容区大小、边框大小、内边距组成
+                /* padding-top: 100px;
+                padding-left: 100px;
+                padding-right: 100px;
+                padding-bottom: 100px;
+                还可以简写为下面的方式 
+             padding: 100px 100px 100px 100px;  */
+             padding-top: 100px;
+             padding-bottom: 100px;
+            /* 
+            外边距不会影响盒子的可见框的大小，
+            但是会影响盒子占地的位置
+            一共有四个方向的外边距
+            margin-top
+            ....(同上)
+            默认情况下元素按自左向右方向排列，默认情况下
+            设置左上方向的外边距，移到的是元素自身
+            设置下右方向的外边距，移到的是其他元素
+            margin设置的值可以是负数
+            margin-right默认情况下没有用
+            margin会影响盒子实际占地大小！！！
+             */
+            margin-top: 100px;
+            margin-left: 100px;
+            margin-bottom: 100px;
+            
+            
+           
+        } 
+          /*
+          元素在其父元素中水平方向的位置由一下几个属性共同决定
+          margin-left
+          border-left
+          padding-left
+          width
+          padding-right
+          border-right
+          margin-right
+          并且要求这几个值相加要等于父元素的content的宽度
+          如果不相等浏览器默认会进行自动调整
+          如果这7个值没有为auto的情况则浏览器，自动调整margin-right的值
+          这7个值中有3个值可以设置为auto分别为width、margin-right、margin-left
+          如果某个值为auto，则调整auto的那个值使等式成立
+          如果将宽度和和一个外边距设置为auto，则宽度调整为最大，auto的那个外边距自动为0.
+          如果将三个值都设置为0，则宽度最大，其余为0
+          如果左右外边距都设置为auto，则元素在其父元素中水平居中。
+          如下面的.inner1中的例子
+          */
+        .inner1{width: 100px;
+                height: 100px;
+                margin: 0 auto;
+                background-color: yellow;}
+        .inner2{width: 100px;
+                height: 100px;
+                background-color: yellow;}
+        .box2
+        {
+            width: 100px;
+            height: 100px;
+            border:10px solid red;
+            padding: 100px;
+            background-color: blue;
+            margin-left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 盒子模型 
+        css将页面将所有的元素都设置为一个矩形的盒子
+        每个盒子都由一下几个部分组成
+        ①内容区(content)
+        ②内边距(padding)
+        ③边框(border)
+        ④外边距(marging)
+    -->
+    <div class="box1"><div class="inner1">AAA</div></div>
+    <div class="box2"><div class="inner2">AAA</div></div>
+</body>
+</html>

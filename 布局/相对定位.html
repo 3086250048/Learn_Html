@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: #bfc;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            /* 定位
+                static 关闭定位
+                relative 相对定位
+                absolute 绝对定位
+                fixed 固定定位
+                sticky 粘滞定位 
+            offset:通过偏移量来设置元素的位置
+                top:定位元素与上边的距离
+                bottom:定位元素和下边的距离
+                通常情况下使用以上其中之一
+                left和right同理
+
+                */
+            /* 相对定位参照的是元素自身
+            在文档流中的位置 */
+            position: relative  ;
+            top:80px;
+            left: 100px;
+            
+
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/去除默认样式.css">
+    <style>
+        /* 默认情况下
+            盒子的可见款大小=内容区+padding+border */
+        .box1{
+            height: 100px;
+            width: 100px;
+            border: solid 10px red;
+            background-color: black;
+            padding: 10px;   
+            /* box-sizing用于设置盒子尺寸的计算方式
+                默认情况下为box-sizing，即宽度和高度用
+                来设置内容区的大小
+                
+                border-box :宽度和高度设置的是可见框的大小;*/
+            box-sizing: border-box;
+        }
+        .box2{
+            height: 60px;
+            width: 60px;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+</body>
+</html>

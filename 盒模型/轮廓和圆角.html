@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box1{
+            margin: 50px auto;
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            background-color: antiquewhite;
+            
+        }
+        .box1:hover{
+                /*
+            outline 用来设置可见框的轮廓线，用法和border
+            一致，但是轮廓不会影响到可见框的大小 
+             */
+            outline: 5px solid red;
+            /* 
+            box-shadow用来设置元素的阴影
+            和outerline一样不会影响可见框的大小。
+            参数解释
+            第一个:设置阴影的水平位置，+为向右移到，-为向左移动
+            第二个:设置阴影的垂直位置，+为向下移到，-为向上移动
+            第三个:阴影的模糊半径
+            第四个:阴影的颜色，建议使用rgba，a用于设置阴影的透明度
+             */
+             box-shadow:0px 0px 50px rgba(0,0,0,0.5) ;
+        }
+        .box2{
+            height: 200px;
+            width: 200px;
+            background-color: antiquewhite;
+            /* border-radius用来设置圆角
+                border-xxxx-xxxx-radius
+                用来设置不同方位的圆角
+                50px用来设置与角相切的圆的半径
+                一个参数用于设置水平和垂直的边的圆角，两个
+                参数用于设置水平方向的边的圆角
+                100px在两个参数的情况下用来设置垂直
+                方向的边的圆角
+                 */
+            border-top-right-radius: 50px 100px;
+            /* 不跟方位参数的时候需要用/分别设置水平和垂直
+            方向的边框的圆角 */
+            border-radius: 50px/100px;
+            /* 设置为圆形 */
+            border-radius: 50%;
+        }   
+    </style>
+</head>
+<body>
+    <!-- <div class="box1"></div>
+    <span>hello</span> -->
+    <div class="box2"></div>
+</body>
+</html>
